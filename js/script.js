@@ -25,8 +25,8 @@ buttonStart.addEventListener('click', function () {
   setTimeout(() => {
     timeout.classList.toggle('hidden-element');
     timer.classList.toggle('hidden-element');
-  }, 120000);
-  getTimer(120);
+  }, 1000);
+  getTimer(1);
 });
 
 buttonNext.addEventListener('click', function () {
