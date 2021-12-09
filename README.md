@@ -1,2 +1,2 @@
-# words.github.io
+# gapeevaleksey.github.io
 Game "Words"
