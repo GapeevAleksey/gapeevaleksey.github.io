@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&display=swap');
+
 * {
   padding: 0;
   margin: 0;
@@ -74,7 +76,7 @@ h6 {
 }
 
 body {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Comfortaa', cursive;
   color: #555;
 }
 
@@ -85,6 +87,14 @@ body {
 }
 
 .wrapper {
+  background: rgb(160, 75, 118);
+  background: radial-gradient(
+    circle,
+    rgba(160, 75, 118, 1) 0%,
+    rgba(155, 69, 110, 1) 15%,
+    rgba(112, 60, 100, 1) 49%,
+    rgba(78, 41, 82, 1) 100%
+  );
   position: relative;
   height: 100%;
   overflow: hidden;
@@ -97,23 +107,40 @@ body {
 }
 
 .output-word {
-  font-size: 45px;
-  margin: 100px auto 60px;
+  padding: 0 50px;
+  margin: 50px 0 70px;
+  background-color: rgb(66, 31, 71);
+}
+
+.output-word__item {
+  font-size: 35px;
+  line-height: 60px;
+  max-width: 500px;
+  margin: 50px auto;
+  padding: 20px auto;
+  color: rgb(255, 233, 217);
+  text-transform: uppercase;
 }
 
 .timer {
   position: relative;
-  margin: 50px auto;
+  margin: 0 auto;
   width: 100%;
   height: 100%;
 }
 .timer__text {
+  height: 200px;
+  width: 200px;
+  line-height: 200px;
+  border-radius: 50%;
+  background-color: rgb(245, 245, 245, 1);
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  font-size: 30px;
-  color: rgb(207, 207, 207);
+  font-size: 70px;
+  color: rgb(174, 87, 122);
+  box-shadow: 0px 0px 55px rgb(46, 46, 46);
 }
 
 .db-words {
@@ -122,31 +149,46 @@ body {
 }
 
 .button-next {
-  padding: 0 20px;
-  width: 200px;
+  width: 100%;
   height: 70px;
   margin: 0 auto 50px;
-  font-size: 25px;
-  line-height: 70px;
-  border: 1px solid rgb(190, 158, 132);
-  background-color: rgb(253, 166, 95);
-  border-radius: 15px;
-  color: #fff;
-  box-shadow: 0px 0px 15px rgb(110, 110, 110);
+  padding: 0 50px;
 }
-.button-start {
-  padding: 0 20px;
-  width: 200px;
-  height: 70px;
+
+.button-next__item {
   margin: 0 auto;
   font-size: 25px;
   line-height: 70px;
-  border: 1px solid rgb(190, 158, 132);
-  background-color: rgb(253, 166, 95);
-  border-radius: 15px;
-  color: #fff;
+  max-width: 500px;
+  /* border: 0px solid rgb(190, 158, 132); */
+  background-color: rgb(174, 87, 122);
+  border-radius: 35px;
+  letter-spacing: 5px;
+  color: rgb(255, 233, 217);
+  text-transform: uppercase;
+  transform: translate(0, 0);
+  /* box-shadow: 0px 0px 15px rgb(110, 110, 110); */
+}
+
+.button-start {
+  width: 100%;
+  height: 70px;
+  padding: 0 50px;
+}
+
+.button-start__item {
+  margin: 0 auto;
+  font-size: 25px;
+  line-height: 70px;
+  max-width: 500px;
+  /* border: 0px solid rgb(190, 158, 132); */
+  background-color: rgb(174, 87, 122);
+  border-radius: 35px;
+  letter-spacing: 5px;
+  color: rgb(255, 233, 217);
+  text-transform: uppercase;
   transform: translate(0, 100%);
-  box-shadow: 0px 0px 15px rgb(110, 110, 110);
+  /* box-shadow: 0px 0px 15px rgb(110, 110, 110); */
 }
 
 .timeout {

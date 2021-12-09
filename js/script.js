@@ -1,6 +1,6 @@
-let outputWord = document.querySelector('.output-word'),
-  buttonNext = document.querySelector('.button-next'),
-  buttonStart = document.querySelector('.button-start'),
+let outputWord = document.querySelector('.output-word__item'),
+  buttonNext = document.querySelector('.button-next__item'),
+  buttonStart = document.querySelector('.button-start__item'),
   timeout = document.querySelector('.timeout'),
   timeoutButton = document.querySelector('.timeout__button'),
   timer = document.querySelector('.timer__text'),
@@ -18,6 +18,7 @@ for (let i = 1; i <= dbWordsBlockCount; i++) {
 // ---------- Обработка кнопок ------------------------------------------------------------
 
 buttonStart.addEventListener('click', function () {
+  buttonNext.classList.toggle('hidden-element');
   buttonStart.classList.toggle('hidden-element');
   timer.classList.toggle('hidden-element');
   outputWord.textContent = dbWordsResult[randomWord(dbWordsResult.length)];
@@ -25,7 +26,7 @@ buttonStart.addEventListener('click', function () {
     timeout.classList.toggle('hidden-element');
     timer.classList.toggle('hidden-element');
   }, 7000);
-  getTimer(7);
+  getTimer(120);
 });
 
 buttonNext.addEventListener('click', function () {
@@ -40,7 +41,7 @@ timeoutButton.addEventListener('click', function () {
     timeout.classList.toggle('hidden-element');
     timer.classList.toggle('hidden-element');
   }, 7000);
-  getTimer(7);
+  getTimer(120);
 });
 
 // ------- Вывод логов в консоль ---------
