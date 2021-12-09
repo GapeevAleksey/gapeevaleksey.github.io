@@ -3,6 +3,7 @@ let outputWord = document.querySelector('.output-word'),
   buttonStart = document.querySelector('.button-start'),
   timeout = document.querySelector('.timeout'),
   timeoutButton = document.querySelector('.timeout__button'),
+  timer = document.querySelector('.timer__text'),
   dbWordsBlockCount = document.querySelector('.db-words').children.length,
   dbWordsResult = [];
 
@@ -18,10 +19,13 @@ for (let i = 1; i <= dbWordsBlockCount; i++) {
 
 buttonStart.addEventListener('click', function () {
   buttonStart.classList.toggle('hidden-element');
+  timer.classList.toggle('hidden-element');
   outputWord.textContent = dbWordsResult[randomWord(dbWordsResult.length)];
   setTimeout(() => {
     timeout.classList.toggle('hidden-element');
-  }, 3000);
+    timer.classList.toggle('hidden-element');
+  }, 7000);
+  getTimer(7);
 });
 
 buttonNext.addEventListener('click', function () {
@@ -30,10 +34,13 @@ buttonNext.addEventListener('click', function () {
 
 timeoutButton.addEventListener('click', function () {
   timeout.classList.toggle('hidden-element');
+  timer.classList.toggle('hidden-element');
   outputWord.textContent = dbWordsResult[randomWord(dbWordsResult.length)];
   setTimeout(() => {
     timeout.classList.toggle('hidden-element');
-  }, 3000);
+    timer.classList.toggle('hidden-element');
+  }, 7000);
+  getTimer(7);
 });
 
 // ------- Вывод логов в консоль ---------
@@ -48,6 +55,15 @@ function randomWord(max) {
   return Math.floor(Math.random() * max);
 }
 
+// ------- Таймер ---------
+function getTimer(sec) {
+  timer.textContent = sec;
+  let timerInterval = setInterval(() => {
+    timer.textContent = sec - 1;
+    sec--;
+    sec == 0 ? clearInterval(timerInterval) : false;
+  }, 1000);
+}
 // // ------- Выборка слов из таблицы ---------
 
 // let text = document.querySelectorAll('.text');
