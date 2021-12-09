@@ -158,6 +158,7 @@ body {
 }
 
 .button-next__item {
+  cursor: pointer;
   margin: 0 auto;
   font-size: 25px;
   line-height: 70px;
@@ -179,6 +180,7 @@ body {
 }
 
 .button-start__item {
+  cursor: pointer;
   margin: 0 auto;
   font-size: 25px;
   line-height: 70px;
@@ -217,6 +219,7 @@ body {
 }
 
 .timeout__button {
+  cursor: pointer;
   padding: 0 20px;
   margin: 0 auto;
   font-size: 25px;
